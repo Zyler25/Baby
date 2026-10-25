@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Little Universe 💗</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="floating-hearts" id="floatingHearts"></div>
+
+  <!-- SECRET CODE SCREEN -->
+  <section id="lockScreen" class="lock-screen">
+    <div class="lock-card">
+      <div class="lock-icon">💌</div>
+      <p class="eyebrow">A LITTLE SURPRISE FOR YOU</p>
+      <h1>Our Little Universe</h1>
+      <p class="lock-description">
+        Someone made something special just for you.
+        Ready to open your heart?
+      </p>
+
+      <form id="unlockForm">
+        <input
+          type="password"
+          id="secretCode"
+          placeholder="Enter our secret code"
+          autocomplete="off"
+          required
+        />
+        <button type="submit" class="primary-btn">Unlock My Heart ♡</button>
+      </form>
+
+      <p id="lockMessage" class="lock-message">
+        Hint: A special year for us 💗
+      </p>
+    </div>
+  </section>
+
+  <!-- MAIN WEBSITE -->
+  <main id="website" class="website hidden">
+
+    <!-- TOP NAVIGATION -->
+    <header class="top-bar">
+      <div class="brand">♡ our little universe</div>
+
+      <nav class="page-navigation">
+        <button class="nav-dot active" data-page="home" aria-label="Home">01</button>
+        <button class="nav-dot" data-page="memories" aria-label="Memories">02</button>
+        <button class="nav-dot" data-page="reasons" aria-label="Reasons">03</button>
+        <button class="nav-dot" data-page="promises" aria-label="Promises">04</button>
+        <button class="nav-dot" data-page="letterIntro" aria-label="Love letter">05</button>
+        <button class="nav-dot" data-page="littleThings" aria-label="Little things">06</button>
+        <button class="nav-dot" data-page="coupon" aria-label="Love coupons">07</button>
+        <button class="nav-dot" data-page="surprise" aria-label="Surprise">08</button>
+        <button class="nav-dot" data-page="final" aria-label="Final page">09</button>
+      </nav>
+
+      <button id="musicToggle" class="music-toggle" type="button">
+        ♫ Music
+      </button>
+    </header>
+
+    <!-- PAGE 1: HOME -->
+    <section id="home" class="page-section active-page hero">
+      <div class="hero-content">
+        <span class="small-badge">HAPPY WEEKSARY, MY BABY CHARDY ♡</span>
+
+        <p class="script-text">To my favorite person,</p>
+
+        <h1>
+          You make my<br>
+          <span>world softer.</span>
+        </h1>
+
+        <p class="hero-description">
+          In a world full of temporary things, you're the person
+          I want to keep choosing, loving, and growing with.
+        </p>
+
+        <div class="hero-buttons">
+          <button class="primary-btn" onclick="goToPage('memories')">
+            Enter Our Story ♡
+          </button>
+          <button class="secondary-btn" onclick="toggleMusic()">
+            Play Our Song ♪
+          </button>
+        </div>
+
+        <p class="tiny-note">Made with all the love in my heart.</p>
+      </div>
+
+      <div class="hero-decoration">
+        <div class="photo-frame main-photo">
+          <img src="30dd6618-42ee-4c67-b061-f9814657f5ac.jpeg" alt="Our favorite memory"
+               onerror="this.style.display='none'; this.parentElement.classList.add('photo-placeholder')">
+          <span class="photo-fallback">our favorite memory ♡</span>
+        </div>
+        <div class="floating-note note-one">my safe place ♡</div>
+        <div class="floating-note note-two">always you</div>
+        <div class="decor-heart">♡</div>
+      </div>
+    </section>
+
+    <!-- PAGE 2: MEMORIES -->
+    <section id="memories" class="page-section">
+      <div class="page-content">
+        <p class="eyebrow">CHAPTER ONE</p>
+        <h2>Little moments, <span>big feelings.</span></h2>
+        <p class="section-description">
+          These may look like ordinary pictures, but to me,
+          they're pieces of a life I want to remember with you.
+        </p>
+
+        <div class="memory-grid">
+          <article class="memory-card">
+            <img src="a3193556-55f8-452b-9942-56a778b2c37b.jpeg" alt="Memory one"
+                 onerror="this.style.display='none'; this.parentElement.classList.add('image-placeholder')">
+            <div class="memory-placeholder">♡</div>
+            <div class="memory-caption">
+              <span>01</span>
+              <h3>The beginning</h3>
+              <p>When everything started feeling different.</p>
+            </div>
+          </article>
+
+          <article class="memory-card">
+            <img src="365795be-9c6f-4d5e-875d-32a3040551a1.jpeg" alt="Memory two"
+                 onerror="this.style.display='none'; this.parentElement.classList.add('image-placeholder')">
+            <div class="memory-placeholder">♡</div>
+            <div class="memory-caption">
+              <span>02</span>
+              <h3>My favorite smile</h3>
+              <p>A little reminder of why I fell for you.</p>
+            </div>
+          </article>
+
+          <article class="memory-card">
+            <img src="6e7ec18a-3bc6-40c0-9279-3f3509a4dcc7 (1).jpeg" alt="Memory three"
+                 onerror="this.style.display='none'; this.parentElement.classList.add('image-placeholder')">
+            <div class="memory-placeholder">♡</div>
+            <div class="memory-caption">
+              <span>03</span>
+              <h3>Our kind of happy</h3>
+              <p>Nothing extraordinary, just us.</p>
+            </div>
+          </article>
+
+          <article class="memory-card">
+            <img src="52e28f27-74ae-4fbf-83ef-798230f14f94.jpeg" alt="Memory four"
+                 onerror="this.style.display='none'; this.parentElement.classList.add('image-placeholder')">
+            <div class="memory-placeholder">♡</div>
+            <div class="memory-caption">
+              <span>04</span>
+              <h3>Still my person</h3>
+              <p>The memory I would choose all over again.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 3: REASONS -->
+    <section id="reasons" class="page-section">
+      <div class="page-content">
+        <p class="eyebrow">CHAPTER TWO</p>
+        <h2>A few reasons <span>why it's you.</span></h2>
+        <p class="section-description">
+          I could write a thousand reasons, but let's start with these.
+        </p>
+
+        <div class="reasons-grid">
+          <article class="reason-card">
+            <span class="reason-number">01</span>
+            <div class="reason-icon">☁️</div>
+            <h3>You feel like peace.</h3>
+            <p>With you, even an ordinary day can feel a little lighter.</p>
+          </article>
+
+          <article class="reason-card">
+            <span class="reason-number">02</span>
+            <div class="reason-icon">🫶</div>
+            <h3>You understand me.</h3>
+            <p>You make me feel seen, even when I struggle to explain myself.</p>
+          </article>
+
+          <article class="reason-card">
+            <span class="reason-number">03</span>
+            <div class="reason-icon">🌷</div>
+            <h3>You make love feel real.</h3>
+            <p>Not perfect or effortless, but something worth caring for.</p>
+          </article>
+
+          <article class="reason-card">
+            <span class="reason-number">04</span>
+            <div class="reason-icon">🏡</div>
+            <h3>You feel like home.</h3>
+            <p>Somehow, your presence makes the world feel less lonely.</p>
+          </article>
+
+          <article class="reason-card">
+            <span class="reason-number">05</span>
+            <div class="reason-icon">✨</div>
+            <h3>You inspire me.</h3>
+            <p>You remind me that there's still so much good to look forward to.</p>
+          </article>
+
+          <article class="reason-card">
+            <span class="reason-number">06</span>
+            <div class="reason-icon">💗</div>
+            <h3>Simply because you're you.</h3>
+            <p>I don't need a perfect reason to keep loving the person you are.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 4: PROMISES -->
+    <section id="promises" class="page-section">
+      <div class="page-content promise-layout">
+        <div class="promise-heading">
+          <p class="eyebrow">CHAPTER THREE</p>
+          <h2>Promises from <span>my heart.</span></h2>
+          <p class="section-description">
+            Not promises of perfection, but promises of intention.
+          </p>
+        </div>
+
+        <div class="promise-list">
+          <div class="promise-item">
+            <span>♡</span>
+            <p>I'll keep learning how to love you better, not just how I want to be loved.</p>
+          </div>
+          <div class="promise-item">
+            <span>♡</span>
+            <p>I'll listen to understand you, even when the conversation is difficult.</p>
+          </div>
+          <div class="promise-item">
+            <span>♡</span>
+            <p>I'll celebrate your little victories as if they're my own.</p>
+          </div>
+          <div class="promise-item">
+            <span>♡</span>
+            <p>I'll respect your space and remember that we both deserve room to grow.</p>
+          </div>
+          <div class="promise-item">
+            <span>♡</span>
+            <p>I'll keep choosing honesty, kindness, and effort in the ways that matter.</p>
+          </div>
+        </div>
+
+        <p class="promise-signature">With love, always. ♡</p>
+      </div>
+    </section>
+
+    <!-- PAGE 5: LETTER INTRO -->
+    <section id="letterIntro" class="page-section">
+      <div class="letter-intro-card">
+        <div class="envelope-illustration">
+          <div class="envelope">💌</div>
+          <span class="envelope-heart">♡</span>
+        </div>
+
+        <p class="eyebrow">A LETTER JUST FOR YOU</p>
+        <h2>There's something <span>I want you to know.</span></h2>
+        <p>
+          Some feelings are too precious to leave unsaid.
+          So I put a little piece of my heart into this letter.
+        </p>
+
+        <button class="primary-btn" onclick="openLetter()">
+          Open Your Letter 💗
+        </button>
+      </div>
+    </section>
+
+    <!-- PAGE 6: LOVE LETTER -->
+    <section id="letter" class="page-section letter-section">
+      <div class="letter-paper">
+        <p class="letter-date">A little note for my favorite person</p>
+        <h2>My love,</h2>
+
+        <div class="letter-body">
+          <p>
+            Happy weeksary, baby. ♡
+          </p>
+
+          <p>
+            If there's one thing I want you to remember, it's that your
+            presence means more to me than I can sometimes explain.
+            You have become part of my ordinary days, my random thoughts,
+            and the little things that make me smile without realizing it.
+          </p>
+
+          <p>
+            I know love isn't always made of grand gestures or perfect
+            moments. Sometimes it's in the simple check-ins, the random
+            stories, the patience we give each other, and the decision
+            to understand one another even when life gets overwhelming.
+          </p>
+
+          <p>
+            I don't expect us to have everything figured out. I just hope
+            we keep being honest, keep communicating, and keep making room
+            for each other to grow. I want the kind of love that feels safe,
+            genuine, and chosen not just today, but in all the little days
+            that come after this.
+          </p>
+
+          <p>
+            Thank you for being someone who makes my heart feel something
+            beautiful. Thank you for the memories we've made and the ones
+            we have yet to create.
+          </p>
+
+          <p>
+            If I could make one wish for us, it would be this:
+            may we never forget how special it is to have found each other
+            in this enormous world.
+          </p>
+        </div>
+
+        <p class="letter-ending">All my love,</p>
+        <p class="letter-signature">Spidy Zy ♡</p>
+
+        <button class="text-btn" onclick="goToPage('littleThings')">
+          Continue our story →
+        </button>
+      </div>
+    </section>
+
+    <!-- PAGE 7: LITTLE THINGS -->
+    <section id="littleThings" class="page-section">
+      <div class="page-content little-things-layout">
+        <div>
+          <p class="eyebrow">THE LITTLE THINGS</p>
+          <h2>Things that remind me <span>of you.</span></h2>
+          <p class="section-description">
+            Love isn't always loud. Sometimes it's hiding in the smallest details.
+          </p>
+        </div>
+
+        <div class="little-things-grid">
+          <div class="little-thing">
+            <span>☀️</span>
+            <h3>Your good mornings</h3>
+            <p>A small message that can change the mood of my day.</p>
+          </div>
+
+          <div class="little-thing">
+            <span>🎧</span>
+            <h3>Our songs</h3>
+            <p>Suddenly, a melody has a face, a memory, and a feeling.</p>
+          </div>
+
+          <div class="little-thing">
+            <span>💬</span>
+            <h3>Our conversations</h3>
+            <p>From serious talks to the most random nonsense.</p>
+          </div>
+
+          <div class="little-thing">
+            <span>🌙</span>
+            <h3>Late-night thoughts</h3>
+            <p>When the day gets quiet, you're still someone I think about.</p>
+          </div>
+
+          <div class="little-thing">
+            <span>🧸</span>
+            <h3>Your comfort</h3>
+            <p>The warmth of knowing I have someone special in my life.</p>
+          </div>
+
+          <div class="little-thing">
+            <span>💗</span>
+            <h3>Simply us</h3>
+            <p>Not a perfect story, just one that means something to me.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 8: COUPONS -->
+    <section id="coupon" class="page-section">
+      <div class="page-content">
+        <p class="eyebrow">REDEEM ANYTIME</p>
+        <h2>Little coupons <span>for my love.</span></h2>
+        <p class="section-description">
+          A few tiny promises you can redeem whenever you need them.
+        </p>
+
+        <div class="coupon-grid">
+          <article class="coupon-card">
+            <div class="coupon-icon">🫂</div>
+            <h3>One warm hug</h3>
+            <p>For days when everything feels a little too much.</p>
+            <button onclick="redeemCoupon('A warm hug, whenever you need one. 🫂')">
+              Redeem ♡
+            </button>
+          </article>
+
+          <article class="coupon-card">
+            <div class="coupon-icon">🎬</div>
+            <h3>Movie date</h3>
+            <p>You choose the movie, snacks, and the vibes.</p>
+            <button onclick="redeemCoupon('Movie date! You choose the movie and snacks. 🍿')">
+              Redeem ♡
+            </button>
+          </article>
+
+          <article class="coupon-card">
+            <div class="coupon-icon">🍰</div>
+            <h3>Sweet treat</h3>
+            <p>A little treat because you deserve something sweet.</p>
+            <button onclick="redeemCoupon('A sweet treat for my sweetest person. 🍰')">
+              Redeem ♡
+            </button>
+          </article>
+
+          <article class="coupon-card">
+            <div class="coupon-icon">💌</div>
+            <h3>Love letter</h3>
+            <p>A reminder of how much you mean to me.</p>
+            <button onclick="redeemCoupon('One handwritten love letter, made just for you. 💌')">
+              Redeem ♡
+            </button>
+          </article>
+        </div>
+
+        <div id="couponMessage" class="coupon-message"></div>
+      </div>
+    </section>
+
+    <!-- PAGE 9: SURPRISE -->
+    <section id="surprise" class="page-section">
+      <div class="surprise-content">
+        <div class="bouquet">💐</div>
+        <p class="eyebrow">ONE LAST LITTLE SURPRISE</p>
+        <h2>Flowers for the <span>person who blooms in my heart.</span></h2>
+        <p>
+          I wish I could hand you these flowers in person,
+          look into your eyes, and tell you how special you are to me.
+        </p>
+
+        <button class="primary-btn" onclick="showSurprise()">
+          One More Thing... ♡
+        </button>
+
+        <div id="surpriseMessage" class="surprise-message hidden">
+          <div class="surprise-heart">💗</div>
+          <h3>In every version of my days,</h3>
+          <p>
+            I'm grateful that our paths crossed.
+            Thank you for being part of my story.
+            Here's to more memories, more laughter, and more little reasons
+            to smile together.
+          </p>
+          <p class="script-text">You are loved, more than words can hold.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 10: FINAL -->
+    <section id="final" class="page-section final-section">
+      <div class="final-content">
+        <div class="final-heart">♡</div>
+        <p class="eyebrow">END OF THIS LITTLE SURPRISE</p>
+        <h2>My favorite chapter <span>is still being written.</span></h2>
+        <p>
+          This is just a tiny website, but every word here carries
+          a little piece of what you mean to me.
+        </p>
+
+        <p class="final-script">Happy weeksary, baby.</p>
+        <p class="final-note">Today, tomorrow, and in all the little days ahead. ♡</p>
+
+        <button class="primary-btn" onclick="goToPage('home')">
+          Read Our Story Again ↺
+        </button>
+      </div>
+    </section>
+
+    <!-- BACK/NEXT CONTROLS -->
+    <footer class="page-controls">
+      <button id="backButton" onclick="changePage(-1)" type="button">
+        ← Back
+      </button>
+
+      <span id="pageIndicator">01 / 09</span>
+
+      <button id="nextButton" onclick="changePage(1)" type="button">
+        Next →
+      </button>
+    </footer>
+
+  </main>
+
+  <!-- MUSIC -->
+  <audio id="backgroundMusic" loop>
+    <source src="Maki - Dilaw (Lyrics).mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- COUPON POPUP -->
+  <div id="popup" class="popup-overlay hidden">
+    <div class="popup-card">
+      <button class="popup-close" onclick="closePopup()" aria-label="Close popup">×</button>
+      <div class="popup-icon">💗</div>
+      <h3>Coupon Redeemed!</h3>
+      <p id="popupText"></p>
+      <button class="primary-btn" onclick="closePopup()">Yay! ♡</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
